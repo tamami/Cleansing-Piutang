@@ -1,14 +1,12 @@
 package lab.aikibo.main;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.util.Scanner;
-import java.util.regex.Pattern;
 
 import lab.aikibo.util.PenembakJitu;
 
 public class ProsesFile {
+	
 	
 	public static void main(String args[]) {
 		if(args.length != 1) {
@@ -16,7 +14,6 @@ public class ProsesFile {
 			return;
 		} else {
 			File data = null;
-			Scanner scanner = null;
 			try {
 				data = new File(args[0]);
 				if(PenembakJitu.processFile(data)) {
