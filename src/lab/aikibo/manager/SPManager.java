@@ -3,14 +3,9 @@ package lab.aikibo.manager;
 import java.math.BigDecimal;
 import java.sql.CallableStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Calendar;
-import java.util.Date;
-
-import org.hibernate.Session;
 
 import lab.aikibo.util.BoneCPDSOracle;
-import lab.aikibo.util.ConnectorUtil;
 
 public class SPManager {
 	BoneCPDSOracle boneCP;
@@ -53,7 +48,6 @@ public class SPManager {
 		cs.setString(1, nop);
 		cs.setString(2, thn);
 		cs.setBigDecimal(3, nilai);
-		//java.sql.Date d = 
 		cs.setDate(4, (java.sql.Date) tglTransaksi.getTime());
 		cs.setDate(5, (java.sql.Date) tglCatat.getTime());
 		cs.setBigDecimal(6, denda);
